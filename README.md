@@ -7,6 +7,8 @@ As a computer vision engineer, I tackled this competition to classify wildlife i
 
 The journey began with the training data (`train_labels.csv` and `train_features/`), containing 16,000 images with labels across the eight species. Each row had an `id`, `filepath`, and one-hot-encoded species columns. The validation and test sets (`test_features.csv`) followed a similar structure, with `id` as the index, `filepath`, and an additional `site` column for test data, but no labels for the latter.
 
+One the second thought, the reason why we don't have the `image folders` (train and test features) is because of the huge size of it. I couldn't push them all. But if you wish to have them i updload both folders in my google drive. React out whenever you want.
+
 To handle this, I built a custom PyTorch `Dataset` class, `ConserVisionDataset`, to:
 - Load images from `filepath` using PIL.
 - Apply transformations: resize to 224x224, convert to tensor, and normalize with ImageNet stats (`mean=[0.485, 0.456, 0.406]`, `std=[0.229, 0.224, 0.225]`).
@@ -41,7 +43,7 @@ To understand performance, I:
 - **Confusion Matrix**: Highlighted where misclassifications occurred (e.g., confusing similar species like `bird` and `monkey_prosimian`).
 
 **Visualization Screenshot**  
-Here’s the loss and accuracy over time from training (insert your screenshot):  
+Here’s the loss and accuracy over time from training:  
 ![Loss and Accuracy Over Time](./data/loss_accuracy.png)
 
 **Challenge**: The validation set initially lacked labels, requiring a fix by ensuring it mirrored the training structure. This let me compute true metrics and refine the process.
