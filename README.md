@@ -1,5 +1,5 @@
 # Wildlife Image Classification Competition
-![Image example]("./data/image_screen.png")
+![Image example](./data/image_screen.png)
 
 As a computer vision engineer, I tackled this competition to classify wildlife images into eight categories: `antelope_duiker`, `bird`, `blank`, `civet_genet`, `hog`, `leopard`, `monkey_prosimian`, and `rodent`. The goal was to develop a robust model using a limited training set, validate its performance, and generate predictions for the test set submission. Below, I document the process, challenges, and solutions from start to finish.
 
@@ -42,7 +42,7 @@ To understand performance, I:
 
 **Visualization Screenshot**  
 Here’s the loss and accuracy over time from training (insert your screenshot):  
-![Loss and Accuracy Over Time]("./data/loss_accuracy.png")
+![Loss and Accuracy Over Time](./data/loss_accuracy.png)
 
 **Challenge**: The validation set initially lacked labels, requiring a fix by ensuring it mirrored the training structure. This let me compute true metrics and refine the process.
 
@@ -65,4 +65,4 @@ For the test set (`test_features.csv`), I predicted probabilities for all 8 clas
 
 This submission reflects a practical, iterative approach to wildlife classification—balancing compute limits with model performance. Ready to see how it scores!
 
-Reach out to me on my [LinkedIn here]("https://www.linkedin.com/in/kiwanasheb/")
+Reach out to me on my [LinkedIn Profile](https://www.linkedin.com/in/kiwanasheb/)
